@@ -6,11 +6,6 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
-/**
- * 
- * @author CassioPaixao
- *
- */
 
 @Entity
 @Table(name = "USER")
@@ -18,8 +13,7 @@ public class User {
 
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "user_seq")
-    @SequenceGenerator(name = "user_seq", sequenceName = "user_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "USERNAME", length = 50, unique = true)
